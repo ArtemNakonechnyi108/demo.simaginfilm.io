@@ -298,20 +298,35 @@
 
       // Определение массива с путями к видео
       var videos = ["video/1.mp4", "video/2.mp4", "video/3.mp4", "video/4.mp4"];
-      var currentIndex = 0; // Текущий индекс видео
+      var currentIndex = 0;
+      var isVideoSwitched = false;
 
       function videoUrl(slider) {
-        document.getElementById("video-slider").src = slider;
+        var video = document.getElementById("video-slider");
+        video.style.opacity = 0; // Установим непрозрачность 0
+        setTimeout(function () {
+          video.src = slider; // Установим новый источник видео
+          video.load(); // Загрузим новое видео
+          video.play(); // Воспроизведем новое видео
+          video.style.opacity = 1; // Вернем непрозрачность 1
+          isVideoSwitched = false; // Сбросим флаг переключения видео
+        }, 1000); // Пауза для плавного перехода
       }
 
-      // Функция для автоматического переключения видео
-      function switchVideo() {
-        currentIndex = (currentIndex + 1) % videos.length; // Увеличиваем индекс на 1, переходя к следующему видео
-        document.getElementById("video-slider").src = videos[currentIndex]; // Устанавливаем новый источник видео
-      }
+      var video = document.getElementById("video-slider");
+      video.addEventListener("timeupdate", function () {
+        if (video.currentTime >= video.duration - 1 && !isVideoSwitched) {
+          // Если видео почти завершено и не было переключено
+          currentIndex = (currentIndex + 1) % videos.length; // Увеличиваем индекс на 1, переходя к следующему видео
+          videoUrl(videos[currentIndex]); // Переключаемся на следующее видео
+          isVideoSwitched = true; // Устанавливаем флаг, чтобы избежать повторного переключения в течение этого цикла обновления времени воспроизведения
+        }
+      });
 
-      // Устанавливаем интервал для переключения видео каждые 8 секунд
-      setInterval(switchVideo, 7000); // 8000 миллисекунд = 8 секунд
+      // Запустите первое видео после загрузки страницы
+      window.onload = function () {
+        videoUrl(videos[currentIndex]);
+      };
     </script>
   </body>
 </html>

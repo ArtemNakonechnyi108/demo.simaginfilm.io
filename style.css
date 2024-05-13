@@ -192,14 +192,14 @@ header .navbar ul li a:hover {
 
 /* slide show video start */
 
-.container-video {
+.home .container-video {
   position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
 }
 
-.container-video video {
+.home .container-video video {
   position: absolute;
   top: 0;
   left: 0;
@@ -210,7 +210,7 @@ header .navbar ul li a:hover {
   object-fit: cover;
 }
 
-.container-video .controls {
+.home .container-video .controls {
   position: absolute;
   bottom: 50px;
   left: 50%;
@@ -220,7 +220,7 @@ header .navbar ul li a:hover {
   align-items: center;
 }
 
-.container-video .controls li {
+.home .container-video .controls li {
   list-style: none;
   cursor: pointer;
 
@@ -229,12 +229,12 @@ header .navbar ul li a:hover {
   padding: 3px 3px 0px;
 }
 
-.container-video .controls li img {
+.home .container-video .controls li img {
   width: 150px;
   transition: 0.5s;
 }
 
-.container-video .controls li img:hover {
+.home .container-video .controls li img:hover {
   width: 175px;
 }
 /* slide show video end */
