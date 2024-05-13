@@ -48,16 +48,38 @@
     <!-- home section start  -->
 
     <section id="home" class="home">
-      <!-- slide shows start -->
+      <!-- slide show video start -->
 
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
+      <div class="container-video">
+        <video src="video/1.mp4" id="video-slider" autoplay muted loop></video>
+        <ul class="controls">
+          <li onclick="videoUrl('video/1.mp4')">
+            <img src="scrinshots/1.png" />
+          </li>
+          <li onclick="videoUrl('video/2.mp4')">
+            <img src="scrinshots/2.png" />
+          </li>
+          <li onclick="videoUrl('video/3.mp4')">
+            <img src="scrinshots/3.png" />
+          </li>
+          <li onclick="videoUrl('video/4.mp4')">
+            <img src="scrinshots/4.png" />
+          </li>
+        </ul>
+      </div>
 
-      <!-- slide shows end -->
+      <!-- slide show video end -->
+
+      <!-- slide shows photo start -->
+
+      <!-- <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div> -->
+
+      <!-- slide shows photo end -->
       <h3>Hello</h3>
       <div class="container">
         <span class="first-text">I'm</span>
@@ -271,6 +293,25 @@
           openMenu.classList.remove("active");
         });
       });
+
+      // slideshow wideo
+
+      // Определение массива с путями к видео
+      var videos = ["video/1.mp4", "video/2.mp4", "video/3.mp4", "video/4.mp4"];
+      var currentIndex = 0; // Текущий индекс видео
+
+      function videoUrl(slider) {
+        document.getElementById("video-slider").src = slider;
+      }
+
+      // Функция для автоматического переключения видео
+      function switchVideo() {
+        currentIndex = (currentIndex + 1) % videos.length; // Увеличиваем индекс на 1, переходя к следующему видео
+        document.getElementById("video-slider").src = videos[currentIndex]; // Устанавливаем новый источник видео
+      }
+
+      // Устанавливаем интервал для переключения видео каждые 8 секунд
+      setInterval(switchVideo, 7000); // 8000 миллисекунд = 8 секунд
     </script>
   </body>
 </html>
