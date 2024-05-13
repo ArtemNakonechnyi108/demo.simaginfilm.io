@@ -237,6 +237,16 @@ header .navbar ul li a:hover {
 .home .container-video .controls li img:hover {
   width: 175px;
 }
+
+#video-slider {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1; /* Начальная непрозрачность */
+  transition: opacity 1s ease-in-out; /* Плавный переход */
+}
 /* slide show video end */
 
 /* slide show photo srtart */
