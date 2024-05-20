@@ -108,7 +108,7 @@ header {
   align-items: center;
   flex-flow: column;
   text-align: center;
-  z-index: 1000;
+  z-index: 100;
 }
 
 header .user img {
@@ -164,7 +164,7 @@ header .navbar ul li a:hover {
   cursor: pointer;
   font-size: var(--medium-fz);
   padding: 1rem 1.5rem;
-  z-index: 1001;
+  z-index: 100;
   border-radius: 0.5rem;
   display: none;
 }
@@ -582,8 +582,8 @@ header .navbar ul li a:hover {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
-  background: rgba(0, 0, 0, 0.8);
+  z-index: 101;
+  background: rgba(0, 0, 0, 0.9);
   height: 100%;
   width: 100%;
   display: none;
@@ -624,9 +624,6 @@ header .navbar ul li a:hover {
   .home {
     padding: 1rem 4rem;
   }
-  .container .popup-video {
-    padding-left: 35rem;
-  }
 }
 @media (min-width: 401px) and (max-width: 991px) {
   header {
@@ -647,10 +644,6 @@ header .navbar ul li a:hover {
 
   header.active {
     left: 0%;
-  }
-
-  .container .popup-video span {
-    top: 40px;
   }
 }
 
