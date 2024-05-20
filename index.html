@@ -34,11 +34,10 @@
       <nav class="navbar">
         <ul>
           <li class="btn-close"><a href="#home">home</a></li>
-          <li class="btn-close"><a href="#about">about</a></li>
-          <li class="btn-close"><a href="#education">experience</a></li>
+          <li class="btn-close"><a href="/public/about.html">about</a></li>
           <li class="btn-close"><a href="#portfolio">portfolio</a></li>
           <li class="btn-close"><a href="#reviews">reviews</a></li>
-          <li class="btn-close"><a href="#contact">contact</a></li>
+          <li class="btn-close"><a href="/public/contact.html">contact</a></li>
         </ul>
       </nav>
     </header>
@@ -48,145 +47,64 @@
     <!-- home section start  -->
 
     <section id="home" class="home">
-      <!-- slide show video start -->
-
-      <div class="container-video">
-        <video id="video-slider" autoplay muted loop></video>
-        <ul class="controls">
-          <li onclick="videoUrl('video/1.mp4')">
-            <img src="scrinshots/1.png" />
-          </li>
-          <li onclick="videoUrl('video/2.mp4')">
-            <img src="scrinshots/2.png" />
-          </li>
-          <li onclick="videoUrl('video/3.mp4')">
-            <img src="scrinshots/3.png" />
-          </li>
-          <li onclick="videoUrl('video/4.mp4')">
-            <img src="scrinshots/4.png" />
-          </li>
-        </ul>
-      </div>
-
-      <!-- slide show video end -->
-
-      <!-- slide shows photo start -->
-
-      <!-- <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div> -->
-
-      <!-- slide shows photo end -->
-      <h3>Hello</h3>
       <div class="container">
-        <span class="first-text">I'm</span>
-        <ul class="second-text">
-          <li><span>Photographer</span></li>
-          <li><span>Video operator</span></li>
-          <li><span>Editior</span></li>
-          <li><span>Drone video operator</span></li>
-        </ul>
+        <div class="slide-container active">
+          <div class="slide">
+            <div class="content">
+              <h3>Создаю истории и оживляю кадры</h3>
+            </div>
+            <video src="video/1.mp4" muted></video>
+          </div>
+        </div>
+        <div class="slide-container">
+          <div class="slide">
+            <div class="content">
+              <h3>Видеомагия в каждом кадре</h3>
+            </div>
+            <video src="video/2.mp4" muted></video>
+          </div>
+        </div>
+        <div class="slide-container">
+          <div class="slide">
+            <div class="content">
+              <h3>Ваши идеи — наше вдохновение</h3>
+            </div>
+            <video src="video/3.mp4" muted></video>
+          </div>
+        </div>
+        <div class="slide-container">
+          <div class="slide">
+            <div class="content">
+              <h3>Запечатлейте моменты, которые важны</h3>
+            </div>
+            <video src="video/4.mp4" muted></video>
+          </div>
+        </div>
+        <div id="next" onclick="next()">></div>
+        <div id="prev" onclick="next()"><</div>
       </div>
-      <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only five
-        centuries, but also the leap into electronic typesetting, remaining
-        essentially unchanged.
-      </p>
-      <a href="#contact">
-        <button class="btn">
-          contact me<i class="fa-regular fa-envelope"></i>
-        </button>
-      </a>
     </section>
     <!-- home section end -->
-    <!-- /* about section start */ -->
-    <sectiom id="about" class="about">
-      <h3 class="heading"><span>About</span> me</h3>
-      <div class="row">
-        <div class="info">
-          <h4><span>name:</span> Oleg Simagin</h4>
-          <h4><span>age:</span>38</h4>
-          <h4><span>Profession:</span> foto-video operator</h4>
-          <h4><span>qualification:</span> expert</h4>
-          <a href="/cv/CV ang.pdf" download="resume_cv.jpg">
-            <button class="btn">
-              Download CV <i class="fas fa-download"></i>
-            </button>
-          </a>
-        </div>
-        <div class="info-box">
-          <div class="box">
-            <span>10+</span>
-            <h3>years of experience</h3>
-          </div>
-          <div class="box">
-            <span>250+</span>
-            <h3>projects</h3>
-          </div>
-          <div class="box">
-            <span>300+</span>
-            <h3>clients</h3>
-          </div>
-          <div class="box">
-            <span>100+</span>
-            <h3>hours spent filming in the air</h3>
-          </div>
-        </div>
-      </div>
-    </sectiom>
-    <!-- /* about section end */ -->
-
-    <!-- education section start -->
-    <section id="education" class="education">
-      <h3 class="heading">my <span>experience</span></h3>
-      <div class="box-container">
-        <div class="box">
-          <i class="fas fa-graduation-cap"></i>
-          <span>2023</span>
-          <h3>Web deweloper</h3>
-          <p>
-            It was popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem
-            Ipsum.
-          </p>
-        </div>
-        <div class="box">
-          <i class="fas fa-graduation-cap"></i>
-          <span>2024</span>
-          <h3>Web deweloper</h3>
-          <p>
-            It was popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem
-            Ipsum.
-          </p>
-        </div>
-      </div>
-    </section>
-    <!-- education section end -->
 
     <!-- portfolio section start -->
     <section id="portfolio" class="portfolio">
       <h3 class="heading">my <span>projects</span></h3>
       <div class="box-container">
         <div class="box">
-          <img src="img/MainImg_1.png" />
-          <div class="overlay-text">photos from spiritual events</div>
+          <a href="/portfolio/img1.html">
+            <img src="img/MainImg_1.png" />
+            <div class="overlay-text">photos from spiritual events</div>
+          </a>
         </div>
         <div class="box">
           <img src="img/MainImg_2.png" />
           <div class="overlay-text">business photo</div>
         </div>
         <div class="box">
-          <img src="img/MainImg_3.png" />
-          <div class="overlay-text">creative videos</div>
+          <a href="/portfolio/video1.html">
+            <img src="img/MainImg_3.png" />
+            <div class="overlay-text">creative videos</div>
+          </a>
         </div>
         <div class="box">
           <img src="img/MainImg_4.png" />
@@ -203,62 +121,6 @@
       </div>
     </section>
     <!-- portfolio section end -->
-
-    <!-- contact section start -->
-
-    <section id="contact" class="contact">
-      <h3 class="heading"><span>contact</span> me</h3>
-      <div class="row">
-        <div class="content">
-          <h3>contact information</h3>
-          <div class="info">
-            <h4><i class="fas fa-envelope"></i>name.info@gmail.com</h4>
-            <h4><i class="fas fa-phone"></i>234-234-344</h4>
-            <h4><i class="fas fa-map-marker-alt"></i>Berlin, German</h4>
-          </div>
-        </div>
-        <form action="https://api.web3forms.com/submit" method="POST">
-          <input
-            type="hidden"
-            name="access_key"
-            value="ada09032-afd2-4bf7-97a7-17c991713124"
-          />
-          <input
-            type="text"
-            name="name"
-            class="input-box"
-            placeholder="name"
-            autocomplete="off"
-          />
-          <input
-            type="email"
-            name="email"
-            class="input-box"
-            placeholder="email"
-            autocomplete="off"
-          />
-          <input
-            type="text"
-            name="project"
-            class="input-box"
-            placeholder="project"
-            autocomplete="off"
-          />
-          <textarea
-            name="message"
-            id=""
-            cols="30"
-            rows="10"
-            class="input-box"
-            placeholder="message"
-          ></textarea>
-          <button type="submit" class="btn">
-            Send <i class="fas fa-paper-plane"></i>
-          </button>
-        </form>
-      </div>
-    </section>
-    <!-- contact section end -->
 
     <!-- footer section start -->
     <div class="social-links">
@@ -296,37 +158,37 @@
 
       // slideshow wideo
 
-      // Определение массива с путями к видео
-      var videos = ["video/1.mp4", "video/2.mp4", "video/3.mp4", "video/4.mp4"];
-      var currentIndex = 0;
-      var isVideoSwitched = false;
+      let slides = document.querySelectorAll(".slide-container");
+      let index = 0;
 
-      function videoUrl(slider) {
-        var video = document.getElementById("video-slider");
-        video.style.opacity = 0; // Установим непрозрачность 0
-        setTimeout(function () {
-          video.src = slider; // Установим новый источник видео
-          video.load(); // Загрузим новое видео
-          video.play(); // Воспроизведем новое видео
-          video.style.opacity = 1; // Вернем непрозрачность 1
-          isVideoSwitched = false; // Сбросим флаг переключения видео
-        }, 1000); // Пауза для плавного перехода
+      function showSlide(idx) {
+        slides.forEach((slide, i) => {
+          slide.classList.remove("active");
+          slide.style.opacity = "0";
+          slide.querySelector("video").pause();
+        });
+        slides[idx].classList.add("active");
+        slides[idx].style.opacity = "1";
+        slides[idx].querySelector("video").play();
+        slides[idx].querySelector("video").onended = next; // Automatically move to next video when current video ends
       }
 
-      var video = document.getElementById("video-slider");
-      video.addEventListener("timeupdate", function () {
-        if (video.currentTime >= video.duration - 1 && !isVideoSwitched) {
-          // Если видео почти завершено и не было переключено
-          currentIndex = (currentIndex + 1) % videos.length; // Увеличиваем индекс на 1, переходя к следующему видео
-          videoUrl(videos[currentIndex]); // Переключаемся на следующее видео
-          isVideoSwitched = true; // Устанавливаем флаг, чтобы избежать повторного переключения в течение этого цикла обновления времени воспроизведения
-        }
-      });
+      function next() {
+        slides[index].classList.remove("active");
+        index = (index + 1) % slides.length;
+        slides[index].classList.add("active");
+        showSlide(index);
+      }
 
-      // Запустите первое видео после загрузки страницы
-      window.onload = function () {
-        videoUrl(videos[currentIndex]);
-      };
+      function prev() {
+        slides[index].classList.remove("active");
+        index = (index - 1 + slides.length) % slides.length;
+        slides[index].classList.add("active");
+        showSlide(index);
+      }
+
+      // Initial show
+      showSlide(index);
     </script>
   </body>
 </html>

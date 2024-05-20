@@ -1,0 +1,113 @@
+<head>
+  <link rel="stylesheet" href="../style.css" />
+
+  <!-- font link -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito"
+    rel="stylesheet"
+    type="text/css"
+  />
+
+  <!-- fonawesome link -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+</head>
+
+<body>
+  <!-- header section start  -->
+
+  <header>
+    <div class="user">
+      <img src="../img/user.jpg" />
+      <h3 class="name">Oleg simagin</h3>
+      <p>Foto-video operator</p>
+    </div>
+
+    <nav class="navbar">
+      <ul>
+        <li class="btn-close"><a href="/index.html">home</a></li>
+        <li class="btn-close"><a href="/public/about.html">about</a></li>
+        <li class="btn-close">
+          <a href="/index.html#portfolio">portfolio</a>
+        </li>
+        <li class="btn-close"><a href="#reviews">reviews</a></li>
+        <li class="btn-close"><a href="/public/contact.html">contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div id="menu" class="fas fa-bars"></div>
+
+  <!-- header section end  -->
+
+  <div class="container">
+    <h3>Video gallery</h3>
+    <div class="video-container">
+      <div class="video">
+        <video src="/portfolio/video1/1.mp4" muted></video>
+      </div>
+      <div class="video">
+        <video src="/portfolio/video1/2.mp4" muted></video>
+      </div>
+      <div class="video">
+        <video src="/portfolio/video1/3.mp4" muted></video>
+      </div>
+      <div class="video">
+        <video src="/portfolio/video1/4.mp4" muted></video>
+      </div>
+      <div class="video">
+        <video src="/portfolio/video1/5.mp4" muted></video>
+      </div>
+      <div class="video">
+        <video src="/portfolio/video1/6.mp4" muted></video>
+      </div>
+      <div class="video">
+        <video src="/portfolio/video1/7.mp4" muted></video>
+      </div>
+      <div class="video">
+        <video src="/portfolio/video1/8.mp4" muted></video>
+      </div>
+    </div>
+    <div class="popup-video">
+      <span>&times;</span>
+      <video muted autoplay controls></video>
+    </div>
+  </div>
+
+  <script>
+    // header control start
+    let menu = document.querySelector("#menu");
+    let openMenu = document.querySelector("header");
+    let blockBody = document.querySelector("body");
+    let headerItems = document.querySelectorAll(".btn-close");
+
+    menu.onclick = () => {
+      menu.classList.toggle("fa-times");
+      openMenu.classList.toggle("active");
+      blockBody.classList.toggle("active");
+    };
+
+    headerItems.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("fa-times");
+        blockBody.classList.toggle("active");
+
+        openMenu.classList.remove("active");
+      });
+    });
+    // header control end
+
+    document.querySelectorAll(".video-container video").forEach((vid) => {
+      vid.onclick = () => {
+        document.querySelector(".popup-video").style.display = "block";
+        document.querySelector(".popup-video video").src =
+          vid.getAttribute("src");
+      };
+    });
+
+    document.querySelector(".popup-video span").onclick = () => {
+      document.querySelector(".popup-video").style.display = "none";
+    };
+  </script>
+</body>
