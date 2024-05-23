@@ -219,10 +219,16 @@ header .navbar ul li a:hover {
   color: #fff;
 }
 
+.container .slide-container .slide .content h1 {
+  font-size: calc(55px + (80 - 55) * ((100vw - 300px) / (1600 - 300)));
+
+  color: #10439f;
+}
+
 .container .slide-container .slide .content h3 {
   font-size: calc(30px + (50 - 30) * ((100vw - 300px) / (1600 - 300)));
   animation: animate 0.4s linear 0.4s backwards;
-  padding: 0% 10%;
+  padding: 1rem 10%;
 }
 
 @keyframes animate {
