@@ -220,7 +220,7 @@ header .navbar ul li a:hover {
 }
 
 .container .slide-container .slide .content h1 {
-  font-size: calc(55px + (80 - 55) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(60px + (80 - 60) * ((100vw - 300px) / (1600 - 300)));
 
   color: #10439f;
 }
